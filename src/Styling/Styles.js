@@ -19,14 +19,25 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginTop: "25px",
     display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    "& > .MuiPaper-root": {
-      width: "90%",
-      marginBottom: "25px",
-      textAlign: "center",
-      "& video": {
-        width: "100%",
+    justifyContent: "space-around",
+    marginBottom: "25px",
+    "& .MuiGrid-item": {
+      display: "flex",
+      justifyContent: "center",
+      "&:nth-child(2)": {
+        [theme.breakpoints.down("sm")]: {
+          marginTop: "25px",
+        },
+      },
+      "& .MuiPaper-root": {
+        width: "90%",
+        padding: "1em",
+        display: "flex",
+        flexDirection: "column",
+        textAlign: "center",
+        "& video": {
+          width: "100%",
+        },
       },
     },
   },
