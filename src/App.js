@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Typography, Paper } from "@material-ui/core"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import useStyles from "./Styling/Styles";
+import Options from "./components/Options";
+import VideoPlayer from "./components/VideoPlayer";
+import Notifications from "./components/Notifications";
+
+const App = () => {
+    const classes = useStyles();
+    
+    return (
+        <div className={classes.wrapper}>
+        <Paper>
+            <Typography variant="h1">Video Chat Application</Typography>
+            <Typography variant="h2">Created by Nathan Williams</Typography>
+        </Paper>
+            <VideoPlayer />
+            <Options>
+                <Notifications />
+            </Options>
+        </div>
+    )
 }
 
 export default App;
