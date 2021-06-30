@@ -42,7 +42,6 @@ const Options = ({ children }) => {
                   color="primary"
                   fullWidth
                   startIcon={<Assignment fontSize="large" />}
-                  onClick={() => console.log(me)}
                 >
                   Copy your id
                 </Button>
@@ -76,7 +75,11 @@ const Options = ({ children }) => {
                   color="primary"
                   startIcon={<Phone fontSize="large" />}
                   fullWidth
-                  onClick={() => callUser(idToCall)}
+                  onClick={() => {
+                    callUser(idToCall);
+                    console.log(idToCall);
+                    console.log(callUser);
+                  }}
                 >
                   Call
                 </Button>
